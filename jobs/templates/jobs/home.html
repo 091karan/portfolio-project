@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -27,8 +28,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav right ml-auto">
             <a class="nav-item nav-link" href="#">Twitter</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="#">Blog</a>
+            <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
       </nav>
@@ -40,6 +41,7 @@
         <div class="container">
           <h1 class="jumbotron-heading">My Portfolio</h1>
           <p class="lead text-muted">Hey I am Karan Agarwal. I am a passionate Web Developer and an Android Developer.</p>
+          <img src="{% static 'me.jpg' %}" height='300px'>
           <p>
             <a href="mailto:091karan@gmail.com" class="btn btn-primary my-2">Email me!</a>
           </p>

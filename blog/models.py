@@ -5,3 +5,12 @@ class Blog(models.Model):
     pub_date = models.DateTimeField()
     body = models.TextField()
     image = models.ImageField(upload_to="images/")
+
+    def __int__(self):
+        return self.title
+
+    def bodyshort(self):
+        return self.body[:100]
+
+    def pub_date_style(self):
+        return self.pub_date.strftime("%b %d, %Y")
